@@ -2,7 +2,7 @@ package com.xavier.nginxlog.structs;
 
 
 /**
- * @author xavier
+ * @author zhengwei
  * @date 2017-08-24
  */
 public abstract class Node {

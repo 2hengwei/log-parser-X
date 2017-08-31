@@ -1,8 +1,8 @@
 package com.xavier.commom;
 
 /**
- * @author xavier
- * @date 2017-08-25
+ * @author zhengwei
+ * @create 2017-08-25
  */
 public class Utils {
 

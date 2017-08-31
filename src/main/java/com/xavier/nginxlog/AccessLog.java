@@ -1,11 +1,9 @@
 package com.xavier.nginxlog;
 
-import com.xavier.commom.Constant;
 import com.xavier.commom.DateUtil;
 import com.xavier.commom.Utils;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 public final class AccessLog {
 

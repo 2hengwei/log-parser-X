@@ -1,5 +1,8 @@
 package com.xavier.commom;
 
+/**
+ * some constant variable.
+ */
 public class Constant {
 
     public static final String[] FORMAT_ARRAY = {

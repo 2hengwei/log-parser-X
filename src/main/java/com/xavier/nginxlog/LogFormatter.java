@@ -39,8 +39,8 @@ import java.util.regex.Pattern;
  */
 public class LogFormatter {
     // log format pattern string
-    public static String LOG_FORMAT_CONFIG = null; // TODO private
-    public static Pattern PATTERN = null; // TODO private
+    private static String LOG_FORMAT_CONFIG = null;
+    private static Pattern PATTERN = null;
     private static Map<String, Integer> FIELD_SEQUENCE_MAP = new HashMap<>();
 
     public static void init(String logFormat) {
@@ -97,7 +97,7 @@ public class LogFormatter {
     /**
      * init PATTERN object, assembly regex expression by sequence of node chain
      */
-    public static void initPattern() { // TODO private
+    private static void initPattern() {
         Node headNode = headNode();
         Node currentNode = headNode;
         int i = -1;
@@ -151,7 +151,7 @@ public class LogFormatter {
      *
      * @return
      */
-    public static List<Node> getNodeList() { // TODO private
+    private static List<Node> getNodeList() {
         List<String> formatVarList = getFormatVariableList();
         List<String> configSeparatorList = getSeparatorVariableList(formatVarList);
         String endingSeparator = getEndingSeparator(formatVarList);
@@ -182,7 +182,7 @@ public class LogFormatter {
      * @param nodeInstanceList
      * @return
      */
-    public static Node makeNodeChain(List<Node> nodeInstanceList) { //TODO private
+    private static Node makeNodeChain(List<Node> nodeInstanceList) {
         int len = nodeInstanceList.size() - 1;
         for (int i = len; i > 0; i--) {
             Node node = nodeInstanceList.get(i);
@@ -219,7 +219,7 @@ public class LogFormatter {
      * </p>
      * @return list of format variable
      */
-    public static List<String> getFormatVariableList() { // TODO private
+    private static List<String> getFormatVariableList() {
         char[] formatCharArray = LOG_FORMAT_CONFIG.toCharArray();
         int start = -1;
         List<String> formatList = new ArrayList<>();
@@ -256,7 +256,7 @@ public class LogFormatter {
      * @return list of separator
      * @throws IllegalArgumentException when params is null or empty.
      */
-    public static List<String> getSeparatorVariableList(List<String> formatVarList) { // TODO private
+    private static List<String> getSeparatorVariableList(List<String> formatVarList) {
         if (formatVarList == null || formatVarList.isEmpty()) {
             throw new IllegalArgumentException("the params is null or empty.");
         }
@@ -287,7 +287,7 @@ public class LogFormatter {
      * @return string of end separator
      * @throws IllegalArgumentException when params is null or empty.
      */
-    public static String getEndingSeparator(List<String> formatVarList) { // TODO private
+    private static String getEndingSeparator(List<String> formatVarList) {
         if (formatVarList == null || formatVarList.isEmpty()) {
             throw new IllegalArgumentException("the params is null or empty.");
         }

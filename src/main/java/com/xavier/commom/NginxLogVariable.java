@@ -1,7 +1,7 @@
 package com.xavier.commom;
 
 /**
- * @author xavier
+ * @author zhengwei
  * @date 2017-08-23
  */
 public enum NginxLogVariable {

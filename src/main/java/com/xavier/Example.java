@@ -12,7 +12,7 @@ import java.nio.file.Files;
  * @author xavier
  * @date 2017-08-23
  */
-public class Main {
+public class Example {
 
     private static final String FORMAT = "$remote_addr - $remote_user [$time_local] \"$request\" $status" +
             " $body_bytes_sent \"$http_referer\" \"$http_user_agent\"  $request_time" +

@@ -7,7 +7,8 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 /**
- * 基于Java8全新时间类的时间相关的工具
+ * Date convert util that use java 8 new times API.
+ *
  * @author zhengwei
  * @create 2017-07-17 17:48
  */

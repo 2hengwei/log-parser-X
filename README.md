@@ -1,6 +1,11 @@
 
 # log-parser-X
 
+![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+![done](http://progressed.io/bar/85?title=done)
+
+Author: zhengwei
+
 A libiary of log parser for nginx.
 
 ## Overview
@@ -46,6 +51,27 @@ The class `AccessLog` is a oridinary JavaBean, but it only contains getter metho
 
 ## Usage
 
+```java
+public class Example {
+
+    private static final String FORMAT = "$remote_addr - $remote_user [$time_local] \"$request\" $status" +
+            " $body_bytes_sent \"$http_referer\" \"$http_user_agent\"  $request_time" +
+            "\"$upstream_response_time\" \"$upstream_cache_status\"";
+
+    public static void main(String[] args) throws IOException {
+        File file = new File("/data/log_data/tile_oneline.log");
+        LogFormatter.init(FORMAT);
+
+        Files.lines(file.toPath(), Charset.forName("UTF-8"))
+                .forEach(line -> {
+                    AccessLog accessLog = LogFormatter.format(line);
+                    System.out.println(accessLog.toString());
+                });
+
+    }
+}
+
+```
 
 
 
